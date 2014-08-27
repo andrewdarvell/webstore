@@ -1,12 +1,14 @@
 package ru.darvell.webstore.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import ru.darvell.webstore.entity.DataType;
 import ru.darvell.webstore.repository.DataTypeRepository;
 import ru.darvell.webstore.service.DataTypeService;
 
 import java.util.List;
 
+@Service
 public class DataTypeServiceImpl implements DataTypeService{
 
 	@Autowired
@@ -30,5 +32,10 @@ public class DataTypeServiceImpl implements DataTypeService{
 	@Override
 	public void deleteDataType(long id) {
 		dataTypeRepository.delete(id);
+	}
+
+	@Override
+	public DataType getDataTypeById(long id) {
+		return dataTypeRepository.findOne(id);
 	}
 }

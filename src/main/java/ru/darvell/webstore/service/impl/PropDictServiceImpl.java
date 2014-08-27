@@ -1,12 +1,14 @@
 package ru.darvell.webstore.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import ru.darvell.webstore.entity.PropDict;
 import ru.darvell.webstore.repository.PropDictRepository;
 import ru.darvell.webstore.service.PropDictService;
 
 import java.util.List;
 
+@Service
 public class PropDictServiceImpl implements PropDictService{
 
 	@Autowired
