@@ -13,7 +13,7 @@
             <property name="hibernate.show_sql" value="true"/>
             <!--property name="hibernate.connection.charSet" value = "UTF-8"/-->
             <!--property name="hibernate.connection.characterEncoding" value = "utf-8" /-->
-            <property name="hibernate.hbm2ddl.auto" value = "create"/>
+            <property name="hibernate.hbm2ddl.auto" value = "update"/>
             <!--property name="connection.characterEncoding" value = "UTF-8"/-->
             <property name="hibernate.connection.useUnicode" value = "true"/>
             <property name="hibernate.connection.characterEncoding" value = "UTF-8"/>
