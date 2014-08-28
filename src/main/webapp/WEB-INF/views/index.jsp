@@ -12,4 +12,6 @@
 </head>
 <body>
     <a href="datatypes">Типы данных</a>
+    <p/>
+    <a href="propertys">Свойства</a>
 </body>

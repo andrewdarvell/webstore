@@ -40,7 +40,7 @@ public class PropDict {
 				"idPropDict=" + idPropDict +
 				", name='" + name + '\'' +
 				", descr='" + descr + '\'' +
-				", dateType=" + dataType +
+				", dataType=" + dataType +
 				'}';
 	}
 
