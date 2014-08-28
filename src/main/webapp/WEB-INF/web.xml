@@ -31,7 +31,7 @@
 
     <servlet-mapping>
         <servlet-name>appServlet</servlet-name>
-        <url-pattern>/</url-pattern>
+        <url-pattern>/webstore/*</url-pattern>
     </servlet-mapping>
 
     <!-- Фильтр для перекодировки в utf8 -->
