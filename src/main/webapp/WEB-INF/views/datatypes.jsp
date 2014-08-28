@@ -51,10 +51,10 @@
         </tr>
         <tr>
             <td>
-                <!--a href="/${mainUrl}/datatypes"-->
-                    <!--spring:message code="datatype.erase"/-->
-                <!--/a-->
-            </td>>
+                <a href="/${mainUrl}/datatypes">
+                    <spring:message code="datatype.erase"/>
+                </a>
+            </td>
             <td>
                 <input type="submit" value="<spring:message code="datatype.add"/>" />
             </td>
