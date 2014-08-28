@@ -25,7 +25,7 @@
                 </form:label>
             </td>
             <td>
-                <form:input path="idDataType"/>
+                <form:input path="idDataType" readonly="true"/>
             </td>
         </tr>
         <tr>
