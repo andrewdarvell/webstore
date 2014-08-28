@@ -11,7 +11,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf8">
     <title><spring:message code="datatype.title" /></title>
 
-    <spring:url value="/webstore" var="mainUrl"/>
+    <spring:url value="webstore" var="mainUrl"/>
 
 </head>
 <body>
@@ -51,11 +51,11 @@
         </tr>
         <tr>
             <td>
-                <a href="${mainUrl}/datatypes">
-                    <spring:message code="datatype.erase"/>
-                </a>
+                <!--a href="/${mainUrl}/datatypes"-->
+                    <!--spring:message code="datatype.erase"/-->
+                <!--/a-->
             </td>>
-            <td colspan="2">
+            <td>
                 <input type="submit" value="<spring:message code="datatype.add"/>" />
             </td>
         </tr>
@@ -74,11 +74,11 @@
         <c:forEach items="${dataTypeList}" var="dataType">
             <tr>
 
-                <td><a href="${mainUrl}/datatypes/view&id=${dataType.idDataType}">${dataType.idDataType}</a></td>
+                <td><a href="/${mainUrl}/datatypes/view&id=${dataType.idDataType}">${dataType.idDataType}</a></td>
                 <td>${dataType.type}</td>
                 <td>${dataType.length}</td>
 
-                <td><a href="${mainUrl}/datatypes/delete&id=${dataType.idDataType}"><spring:message code="datatype.delete" /></a></td>
+                <td><a href="/${mainUrl}/datatypes/delete&id=${dataType.idDataType}"><spring:message code="datatype.delete" /></a></td>
             </tr>
         </c:forEach>
     </table>

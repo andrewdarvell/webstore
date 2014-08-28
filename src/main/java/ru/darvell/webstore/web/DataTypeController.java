@@ -54,13 +54,13 @@ public class DataTypeController {
 		System.out.println(dataType.toString());
 		dataTypeService.addDataType(dataType);
 
-		return "redirect:/webstore/datatypes";
+		return "redirect:/datatypes";
 	}
 
 	@RequestMapping("/datatypes/delete&id={idDataType}")
 	public String deleteDataType(@PathVariable("idDataType") Long id){
 		dataTypeService.deleteDataType(id);
-		return "redirect:/webstore/datatypes";
+		return "redirect:/datatypes";
 	}
 
 
