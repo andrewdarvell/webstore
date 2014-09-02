@@ -8,11 +8,13 @@ public class MainController {
 
 	@RequestMapping(value = "/main")
 	public String showMainPageFromMain(){
+		System.out.println("main page");
 		return "index";
 	}
 
 	@RequestMapping(value = "/")
 	public String showMainPage(){
+		System.out.println("main page");
 		return "index";
 	}
 }
