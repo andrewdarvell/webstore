@@ -17,7 +17,6 @@ public class PropDictController {
 	public String getAllProperties(Map<String, Object> result){
 		result.put("propDictList", propDictService.getAll());
 		return "propdictlist";
-
 	}
 
 

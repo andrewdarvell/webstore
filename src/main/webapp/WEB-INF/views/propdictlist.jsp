@@ -13,7 +13,15 @@
     <spring:url value="webstore" var="mainUrl"/>
 </head>
 <body>
+<form:form method="post" action="/webstore/propertys/add" commandName="propDict">
+    <table>
+        <tr>
 
+        </tr>
+
+    </table>
+
+</form:form>
 <c:if test="${!propDistList}">
     <table>
         <tr>
