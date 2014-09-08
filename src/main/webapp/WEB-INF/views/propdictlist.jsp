@@ -14,17 +14,10 @@
 </head>
 
 <body>
-<form:form method="post" action="/webstore/propertys/add" commandName="propDictAdd">
+<form:form method="post" action="/webstore/propertys/add" commandName="propDict">
     <table>
         <tr>
-            <td>
-                <form:label path="idPropDict">
-                    <spring:message code="propdict.id"/>
-                </form:label>
-            </td>
-            <td>
-                <form:input path="idPropDict" readonly="true"/>
-            </td>
+            <form:hidden path="idPropDict" />
         </tr>
         <tr>
             <td>
