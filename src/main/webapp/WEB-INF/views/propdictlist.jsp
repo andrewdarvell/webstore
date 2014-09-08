@@ -57,8 +57,8 @@
         </tr>
         <tr>
             <td>
-                <a href="/${mainUrl}/datatypes">
-                    <spring:message code="datatype.erase"/>
+                <a href="/${mainUrl}/propertys">
+                    <spring:message code="propdict.erase"/>
                 </a>
             </td>
             <td>
@@ -80,10 +80,12 @@
 
         <c:forEach items="${propDictList}" var="propDict">
             <tr>
-                <td>${propDict.idPropDict}</td>
+                <td><a href="/${mainUrl}/propertys/view&id=${propDict.idPropDict}">${propDict.idPropDict}</a></td>
                 <td>${propDict.name}</td>
                 <td>${propDict.dataType.type}:${propDict.dataType.length}</td>
                 <td>${propDict.descr}</td>
+
+                <td><a href="/${mainUrl}/propertys/delete&id=${propDict.idPropDict}"><spring:message code="propdict.delete"/></a></td>
             </tr>
         </c:forEach>
     </table>

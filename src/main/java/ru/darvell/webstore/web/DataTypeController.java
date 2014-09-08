@@ -49,7 +49,7 @@ public class DataTypeController {
 	}
 
 	@RequestMapping(value = "/datatypes/add", method = RequestMethod.POST)
-	public String addDataType(@ModelAttribute("dataType") DataType dataType,BindingResult result) {
+	public String addDataType(@ModelAttribute("dataType") DataType dataType, BindingResult result) {
 
 		System.out.println(dataType.toString());
 		dataTypeService.addDataType(dataType);

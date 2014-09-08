@@ -33,4 +33,9 @@ public class PropDictServiceImpl implements PropDictService{
 	public void deletePropDict(long id) {
 		propDictRepository.delete(id);
 	}
+
+	@Override
+	public PropDict getPropDictById(long id) {
+		return propDictRepository.findOne(id);
+	}
 }

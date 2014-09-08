@@ -10,4 +10,5 @@ public interface PropDictService {
 	PropDict editPropDict(PropDict propDict);
 	List<PropDict> getAll();
 	void deletePropDict(long id);
+	PropDict getPropDictById(long id);
 }

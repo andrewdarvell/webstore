@@ -4,10 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import ru.darvell.webstore.entity.DataType;
 import ru.darvell.webstore.entity.PropDict;
@@ -43,4 +40,24 @@ public class PropDictController {
 		return "redirect:/propertys";
 	}
 
+	@RequestMapping("/propertys/view&id={idPropDict}")
+	public String editProperty(@PathVariable("idPropDict") long idPropDict,
+							   Model model){
+
+		PropDict propDict = propDictService.getPropDictById(idPropDict);
+		if(propDict != null){
+			model.addAttribute("propDict", propDict);
+			model.addAttribute("propDictList", propDictService.getAll());
+			model.addAttribute("dataTypeList", dataTypeService.getAll());
+			return "propdictlist";
+		}else {
+			return "redirect:/propertys";
+		}
+	}
+
+	@RequestMapping("/propertys/delete&id={idPropDict}")
+	public String deleteDataType(@PathVariable("idPropDict") Long id){
+		propDictService.deletePropDict(id);
+		return "redirect:/propertys";
+	}
 }
