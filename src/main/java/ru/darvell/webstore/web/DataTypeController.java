@@ -63,8 +63,5 @@ public class DataTypeController {
 		return "redirect:/datatypes";
 	}
 
-
-	//<!--spring:param name="slug" value="best-article" /-->
-
 }
 
