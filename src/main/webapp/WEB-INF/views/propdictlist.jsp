@@ -14,11 +14,9 @@
 </head>
 
 <body>
-<form:form method="post" action="/webstore/propertys/add" commandName="propDict">
+<form:form method="post" action="/webstore/propertys/add" modelAttribute="propDict">
     <table>
-        <tr>
-            <form:hidden path="idPropDict" />
-        </tr>
+        <form:hidden path="idPropDict" />
         <tr>
             <td>
                 <form:label path="name">
@@ -37,11 +35,13 @@
             </td>
             <td>
                 <!--form:input path="dataType"/-->
-                <form:select path="dataType">
-                    <form:option value="NONE" label="--- Select ---" />
+                <form:select path="dataType.idDataType">
+
                     <c:forEach items="${dataTypeList}" var="dataTypeSelect">
                         <form:option value="${dataTypeSelect.idDataType}" label="${dataTypeSelect.type}"/>
                     </c:forEach>
+
+                    <!--form:options items="${dataTypeList}" itemValue="idDataType" itemLabel="type"/-->
                 </form:select>
             </td>
         </tr>
