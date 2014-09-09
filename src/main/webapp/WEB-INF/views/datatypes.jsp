@@ -13,8 +13,16 @@
 
     <spring:url value="webstore" var="mainUrl"/>
 
+	<link rel="stylesheet" href="/resources/main.css" />
+	<link href="/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen" />
+	<script src="http://code.jquery.com/jquery-latest.js"><!-- --></script>
+	<script src="/resources/bootstrap/js/bootstrap.min.js"><!-- --></script>
+</head>
+
 </head>
 <body>
+<a href="/${mainUrl}/main">Назад</a>
+<p/>
 
 <form:form method="post" action="/webstore/datatypes/add" commandName="dataType">
     <table>

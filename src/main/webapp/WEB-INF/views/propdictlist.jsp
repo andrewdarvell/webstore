@@ -14,6 +14,8 @@
 </head>
 
 <body>
+<a href="/${mainUrl}/main">Назад</a>
+<p/>
 <form:form method="post" action="/webstore/propertys/add" modelAttribute="propDict">
     <table>
         <form:hidden path="idPropDict" />

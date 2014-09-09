@@ -1,8 +1,10 @@
 package ru.darvell.webstore.entity;
 
 import org.hibernate.annotations.GenericGenerator;
+import sun.plugin2.message.Message;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "prop_dict")
@@ -14,12 +16,14 @@ public class PropDict {
 	@Column(name = "id_prop_dict",nullable = false)
 	private long idPropDict;
 
+	@NotNull(message = "Мнемоника должна быть указана")
 	@Column(name = "name")
 	private String name;
 
 	@Column(name = "descr")
 	private String descr;
 
+	@NotNull(message = "Тип даннх должен быть заполнен")
 	@ManyToOne
 	@JoinColumn(name = "data_type_id")
 	private DataType dataType;
