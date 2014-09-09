@@ -32,7 +32,6 @@ public class PropDictController {
 
 	@RequestMapping(value = "/propertys/add", method = RequestMethod.POST)
 	public String addProperty(@ModelAttribute("propDict") PropDict propDict,
-							  //@RequestParam("dataType") Long idDataType,
 							  BindingResult result){
 		System.out.println(propDict.toString());
 		propDictService.addPropDict(propDict);
