@@ -1,8 +1,12 @@
 package ru.darvell.webstore.entity;
 
+import com.sun.xml.internal.bind.v2.TODO;
 import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.*;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "data_type")
@@ -12,9 +16,11 @@ public class DataType {
 	@GeneratedValue(generator = "increment")
 	@GenericGenerator(name = "increment", strategy = "increment")
 	@Column(name = "id_data_type",nullable = false)
+	@NotNull
 	private long idDataType;
 
 	@Column(name = "type")
+	@NotEmpty(message = "[NotEmpty].[dataType].[type]")
 	private String type;
 
 	@Column(name = "length")

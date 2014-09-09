@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import ru.darvell.webstore.entity.DataType;
 import ru.darvell.webstore.service.DataTypeService;
 
+import javax.validation.Valid;
 import java.util.Map;
 
 @Controller
@@ -49,10 +50,11 @@ public class DataTypeController {
 	}
 
 	@RequestMapping(value = "/datatypes/add", method = RequestMethod.POST)
-	public String addDataType(@ModelAttribute("dataType") DataType dataType, BindingResult result) {
+	public String addDataType(@Valid @ModelAttribute("dataType")DataType dataType, BindingResult result) {
 
-		System.out.println(dataType.toString());
-		dataTypeService.addDataType(dataType);
+		if(!result.hasErrors()) {
+			dataTypeService.addDataType(dataType);
+		}
 
 		return "redirect:/datatypes";
 	}
