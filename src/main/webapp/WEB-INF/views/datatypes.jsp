@@ -34,6 +34,7 @@
 
 
 <form:form method="post" action="/webstore/datatypes/add" commandName="dataType">
+	<form:errors path="*" cssClass="alert alert-error" />
 	<table>
 		<tr>
 			<td>
@@ -70,6 +71,9 @@
 			</td>
 			<td>
 				<form:input path="length"/>
+			</td>
+			<td>
+				<form:errors path="length" cssClass="error"/>
 			</td>
 		</tr>
 		<tr>

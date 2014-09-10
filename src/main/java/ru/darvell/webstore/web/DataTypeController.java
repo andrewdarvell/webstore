@@ -2,6 +2,7 @@ package ru.darvell.webstore.web;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -50,7 +51,7 @@ public class DataTypeController {
 	}
 
 	@RequestMapping(value = "/datatypes/add", method = RequestMethod.POST)
-	public String addDataType(@Valid @ModelAttribute("dataType")DataType dataType, BindingResult result) {
+	public String addDataType(@Valid @ModelAttribute("dataType") DataType dataType, BindingResult result, Model ui) {
 
 		if(!result.hasErrors()) {
 			dataTypeService.addDataType(dataType);

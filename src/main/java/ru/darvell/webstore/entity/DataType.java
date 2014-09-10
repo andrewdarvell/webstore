@@ -5,6 +5,7 @@ import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.*;
+import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
@@ -20,9 +21,10 @@ public class DataType {
 	private long idDataType;
 
 	@Column(name = "type")
-	@NotEmpty(message = "[NotEmpty].[dataType].[type]")
+	@NotEmpty(message = "Empty type")
 	private String type;
 
+	@Max(20)
 	@Column(name = "length")
 	private int length;
 
